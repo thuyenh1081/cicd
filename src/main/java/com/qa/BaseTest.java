@@ -143,8 +143,8 @@ public class BaseTest {
 	public void beforeSuite() throws Exception, Exception {
 		ThreadContext.put("ROUTINGKEY", "ServerLogs");
 //		for iOS
-		server = getAppiumServerDefault();
-//		server = getAppiumService_IOS_Jenkin();
+//		server = getAppiumServerDefault();
+		server = getAppiumService_IOS_Jenkin();
 //		for android
 //		server = getAppiumService();
 		if(!checkIfAppiumServerIsRunnning(4723)) {
@@ -195,10 +195,10 @@ public class BaseTest {
 	}
 	public AppiumDriverLocalService getAppiumService_IOS_Jenkin() {
 		HashMap<String, String> environment = new HashMap<String, String>();
-		environment.put("PATH", "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin:/Users/hoangthuhuyen/Library/Android/sdk/tools:/Users/hoangthuhuyen/Library/AndEEroid/sdk/platform-tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin" + System.getenv("PATH"));
-		environment.put("ANDROID_HOME", "/Users/hoangthuhuyen/Library/Android/sdk");
+		environment.put("PATH", "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin:/Users/hoangthuhuyen/Library/Android/sdk/tools:/Users/hoangthuhuyen/Library/AndDroid/sdk/platform-tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin" + System.getenv("PATH"));
+//		environment.put("ANDROID_HOME", "/Users/hoangthuhuyen/Library/Andr?oid/sdk");
 		return AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
-				.usingDriverExecutable(new File("/usr/local/bin/node"))
+				.usingDriverExecutable(new File("/opt/homebrew/bin/node"))
 				.withAppiumJS(new File("/opt/homebrew/lib/node_modules/appium/build/lib/main.js"))
 				.usingPort(4723)
 				.withArgument(GeneralServerFlag.SESSION_OVERRIDE)
