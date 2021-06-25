@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="tests">
-    <test name="Pixel3">
-        <listeners>
-            <listener class-name="com.qa.listeners.TestListener" />
-        </listeners>
-        <parameter name="emulator" value="true" />
-        <parameter name="platformName" value="Android" />
-        <parameter name="udid" value="emulator-5554" />
-        <parameter name="deviceName" value="Pixel_3" />
-        <parameter name="systemPort" value="10000" />
-        <parameter name="chromeDriverPort" value="11000" />
-        <classes>
-            <class name="com.qa.tests.LoginTests"/>
-<!--            <class name="com.qa.tests.ProductTests"/>-->
-        </classes>
-    </test>
-<!--    <test name="iPhone12">-->
+<!--    <test name="Pixel3">-->
 <!--        <listeners>-->
 <!--            <listener class-name="com.qa.listeners.TestListener" />-->
 <!--        </listeners>-->
-<!--        <parameter name="platformName" value="iOS" />-->
-<!--        <parameter name="udid" value="A4E93779-55E3-493B-A5D4-095F2685C40B" />-->
-<!--        <parameter name="deviceName" value="iPhone 12 Pro Max" />-->
-<!--        <parameter name="wdaLocalPort" value="10001" />-->
-<!--        <parameter name="webkitDebugProxyPort" value="11001" />-->
+<!--        <parameter name="emulator" value="true" />-->
+<!--        <parameter name="platformName" value="Android" />-->
+<!--        <parameter name="udid" value="emulator-5554" />-->
+<!--        <parameter name="deviceName" value="Pixel_3" />-->
+<!--        <parameter name="systemPort" value="10000" />-->
+<!--        <parameter name="chromeDriverPort" value="11000" />-->
 <!--        <classes>-->
 <!--            <class name="com.qa.tests.LoginTests"/>-->
 <!--&lt;!&ndash;            <class name="com.qa.tests.ProductTests"/>&ndash;&gt;-->
 <!--        </classes>-->
 <!--    </test>-->
+    <test name="iPhone12">
+        <listeners>
+            <listener class-name="com.qa.listeners.TestListener" />
+        </listeners>
+        <parameter name="platformName" value="iOS" />
+        <parameter name="udid" value="A4E93779-55E3-493B-A5D4-095F2685C40B" />
+        <parameter name="deviceName" value="iPhone 12 Pro Max" />
+        <parameter name="wdaLocalPort" value="10001" />
+        <parameter name="webkitDebugProxyPort" value="11001" />
+        <classes>
+            <class name="com.qa.tests.LoginTests"/>
+<!--            <class name="com.qa.tests.ProductTests"/>-->
+        </classes>
+    </test>
 </suite>
