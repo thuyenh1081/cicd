@@ -143,10 +143,10 @@ public class BaseTest {
 	public void beforeSuite() throws Exception, Exception {
 		ThreadContext.put("ROUTINGKEY", "ServerLogs");
 //		for iOS
-		server = getAppiumServerDefault();
+//		server = getAppiumServerDefault();
 //		server = getAppiumService_IOS_Jenkin();
 //		for android
-//		server = getAppiumService();
+		server = getAppiumService();
 		if(!checkIfAppiumServerIsRunnning(4723)) {
 			server.start();
 			server.clearOutPutStreams();
